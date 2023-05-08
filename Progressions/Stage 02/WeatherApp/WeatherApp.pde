@@ -3,7 +3,7 @@
 //
 void setup() {
   //Display
-  //Geometry
+  //Gemoetry
   //Population
   //DIV rect()
   buildingURL();
@@ -13,7 +13,7 @@ void setup() {
 //
 void draw() {
   // City Call, see procedure using Boolean & Button
-  // Choice of Three Cities: Lviv, Edmonton, Milan
+  // Choice of Three Cities: Edmonton, Calgary, Red Deer
   }
 //
 void keyPressed() {
