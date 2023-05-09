@@ -1,10 +1,13 @@
 // Open Weather Map App
 // Global Variables
+float appWidth,appHeight;
 //
 void setup() {
-  //Display
+  size(1200, 900);
+  appWidth = width;
+  appHeight = height;
   //Gemoetry
-  //Population
+population();
   //DIV rect()
   buildingURL();
   APICall();
