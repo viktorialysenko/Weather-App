@@ -34,8 +34,8 @@
 import java.util.Date; //Date Conversation, UNIX Time Stamp from Jan 1, 1970
 
 //Global Variables
-String mainWeatherLviv, descriptionLviv, iconLviv, countryLviv, nameLviv;
-float tempLviv, tempMinLviv, tempMaxLviv;
+String mainWeatherLviv, descriptionLviv, iconLviv, countryLviv, nameLviv, windLviv;
+float tempLviv, tempMinLviv, tempMaxLviv, feelsLikeLviv, humidityLviv, windSpeedLviv;
 int sunriseLviv, sunsetLviv;
 Date apiCurrentDateCall;
 
@@ -59,8 +59,13 @@ void currentLviv() {
 
   JSONObject mainLviv = jsonCurrentLviv.getJSONObject("main"); //Unwrap {}
   tempLviv = mainLviv.getFloat("temp");
+  feelsLikeLviv=mainLviv.getFloat("feels_like");
   tempMinLviv = mainLviv.getFloat("temp_min");
   tempMaxLviv = mainLviv.getFloat("temp_max");
+  humidityLviv = mainLviv.getFloat("humidity");
+  
+  JSONObject windLviv = jsonCurrentLviv.getJSONObject("wind");
+  windSpeedLviv=windLviv.getFloat("speed");
 
   long apiCallTimeLviv = jsonCurrentLviv.getInt("dt"); //int not enough memory, needs long (float & double)
   apiCurrentDateCall = humanDate(apiCallTimeLviv);

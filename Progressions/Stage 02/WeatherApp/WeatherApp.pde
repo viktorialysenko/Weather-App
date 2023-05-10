@@ -1,17 +1,24 @@
 // Open Weather Map App
 // Global Variables
-float appWidth,appHeight;
+int appWidth,appHeight, smallerDimension, largerDimension;
+float dateX, dateY, dateRectWidth, dateRectHeight;
+float LvivX, LvivY, LvivRectWidth, LvivRectHeight;
 //
 void setup() {
   size(1200, 900);
   appWidth = width;
   appHeight = height;
+  display();
+
   //Gemoetry
 population();
   //DIV rect()
+ // textSetup();
   buildingURL();
   APICall();
   //unwrapToVariables();
+  rect(dateX, dateY, dateRectWidth, dateRectHeight);
+//  rect (LvivX, LvivY, LvivRectWidth, LvivRectHeight);
 }
 //
 void draw() {
