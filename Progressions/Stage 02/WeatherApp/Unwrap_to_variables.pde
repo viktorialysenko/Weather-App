@@ -41,7 +41,9 @@ Date apiCurrentDateCall;
 
 
 void unwrapToVariables() {
+  println(jsonCurrentLviv);
   currentLviv();
+  
 }
 
 Date humanDate(long unixTime) {
@@ -50,7 +52,9 @@ Date humanDate(long unixTime) {
 }
 
 void currentLviv() {
+  
   JSONArray weatherLviv = jsonCurrentLviv.getJSONArray("weather"); //Unwrapping
+//  printArray(weatherLviv);
 
   JSONObject allLviv = weatherLviv.getJSONObject(0); //Unwrap {}
   mainWeatherLviv = allLviv.getString("main");
@@ -63,7 +67,8 @@ void currentLviv() {
   tempMinLviv = mainLviv.getFloat("temp_min");
   tempMaxLviv = mainLviv.getFloat("temp_max");
   humidityLviv = mainLviv.getFloat("humidity");
-  
+  println("temperature Lviv:", tempLviv  );
+
   JSONObject windLviv = jsonCurrentLviv.getJSONObject("wind");
   windSpeedLviv=windLviv.getFloat("speed");
 
@@ -76,4 +81,5 @@ void currentLviv() {
   sunsetLviv = sysLviv.getInt("sunset");
 
   nameLviv = jsonCurrentLviv.getString("name");
+  println("City Name", nameLviv );
 }

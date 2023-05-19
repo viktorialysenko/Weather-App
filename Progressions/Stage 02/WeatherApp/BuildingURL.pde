@@ -24,24 +24,23 @@ void buildingURL() {
   //
   //Concatenate the URL
   /*URLCurrentAlberta = baseURL_Current+albertaId+and+apiKey+and+mode+and+unitMetric;
-  URLForecastAlberta = baseURL_Forecast+albertaId+and+apiKey+and+mode+and+unitMetric;
-  */
+   URLForecastAlberta = baseURL_Forecast+albertaId+and+apiKey+and+mode+and+unitMetric;
+   */
   //Other IDs for other places
   //
   URLCurrentLviv = baseURL_Current+LvivId+and+apiKey+and+mode+and+unitMetric;
   URLForecastLviv = baseURL_Forecast+LvivId+and+apiKey+and+mode+and+unitMetric;
 
   //Verification in Console, copy-paste variable output to Chrome and verify data can be seen correctly
- 
+
   println(URLCurrentLviv);
   println(URLForecastLviv);
- 
 } //End buildingURL()
 
 void APICall() {
   jsonCurrentLviv = loadJSONObject(URLCurrentLviv);
   jsonForecastLviv = loadJSONObject(URLForecastLviv);
-
+  println(jsonCurrentLviv);
 } //End APICall
 
 //Loading JSONObjects with Website API Data

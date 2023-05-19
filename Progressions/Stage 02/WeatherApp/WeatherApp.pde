@@ -1,9 +1,9 @@
 // Open Weather Map App
 // Global Variables
-int appWidth,appHeight, smallerDimension, largerDimension;
+int appWidth, appHeight, smallerDimension, largerDimension;
 float dateX, dateY, dateRectWidth, dateRectHeight;
 float LvivX, LvivY, LvivRectWidth, LvivRectHeight, temperatureX, temperatureY, temperatureWidth, temperatureHeight;
-float highX, highY,highWidth, highHeight, lowX, lowY, lowWidth, lowHeight;
+float highX, highY, highWidth, highHeight, lowX, lowY, lowWidth, lowHeight;
 //
 void setup() {
   size(1200, 900);
@@ -12,16 +12,16 @@ void setup() {
   display();
 
   //Gemoetry
-population();
+  population();
   //DIV rect()
- // textSetup();
+  // textSetup();
   buildingURL();
   APICall();
-  //unwrapToVariables();
+  unwrapToVariables();
   rect(dateX, dateY, dateRectWidth, dateRectHeight);
   rect (LvivX, LvivY, LvivRectWidth, LvivRectHeight);
   rect(temperatureX, temperatureY, temperatureWidth, temperatureHeight);
-  rect(highX, highY,highWidth, highHeight);
+  rect(highX, highY, highWidth, highHeight);
   rect(lowX, lowY, lowWidth, lowHeight);
   textSetup();
   barText();
@@ -30,7 +30,7 @@ population();
 void draw() {
   // City Call, see procedure using Boolean & Button
   // Choice of Three Cities: Edmonton, Calgary, Red Deer
-  }
+}
 //
 void keyPressed() {
   APICall();
