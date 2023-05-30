@@ -22,11 +22,6 @@ void buildingURL() {
   String unitMetric = "units=metric";
   String and = "&";
   //
-  //Concatenate the URL
-  /*URLCurrentAlberta = baseURL_Current+albertaId+and+apiKey+and+mode+and+unitMetric;
-   URLForecastAlberta = baseURL_Forecast+albertaId+and+apiKey+and+mode+and+unitMetric;
-   */
-  //Other IDs for other places
   //
   URLCurrentLviv = baseURL_Current+LvivId+and+apiKey+and+mode+and+unitMetric;
   URLForecastLviv = baseURL_Forecast+LvivId+and+apiKey+and+mode+and+unitMetric;

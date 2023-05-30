@@ -27,7 +27,10 @@ void population() {
   lowY=highY;
   lowWidth= highWidth;
   lowHeight= highHeight;
- 
-  
+ //
+ iconX=dateX+dateRectWidth*1/4;
+ iconY=temperatureY;
+ iconWidth=temperatureWidth;
+ iconHeight=temperatureHeight;
   
 }

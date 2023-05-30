@@ -19,9 +19,14 @@ void barText() {
   // 
   textFont(lucida, 20); 
   fill(#0043C4);
-  text(tempMinLviv+"°C", lowX+lowWidth*1/2, lowY+lowHeight*1/2);
+   text("Low:\t\t",lowX+lowWidth*1/2, lowY+lowHeight*1/4);
+  text(tempMinLviv+"°C", lowX+lowWidth*1/2, lowY+lowHeight*3/4);
    fill(#C13802);
-  text(tempMaxLviv+"°C",highX+highWidth*1/2, highY+highHeight*1/2);
+   text("High:\t\t",highX+highWidth*1/2, highY+highHeight*1/4);
+  text(tempMaxLviv+"°C",highX+highWidth*1/2, highY+highHeight*3/4);
   //fill(resetDefaultInk);
+  //////////////////////Forecast Text
+    textFont(lucida, 36);
+  text("Forecast", LvivX, LvivY+temperatureHeight*2.3, LvivRectWidth, LvivRectHeight);
 }//End spaceBarText
 //
