@@ -36,6 +36,7 @@ import java.util.Date; //Date Conversation, UNIX Time Stamp from Jan 1, 1970
 //Global Variables
 String mainWeatherLviv, descriptionLviv, iconLviv, countryLviv, nameLviv, windLviv;
 float tempLviv, tempMinLviv, tempMaxLviv, feelsLikeLviv, humidityLviv, windSpeedLviv;
+String iconForecastLviv;
 int sunriseLviv, sunsetLviv;
 Date apiCurrentDateCall;
 
@@ -47,7 +48,11 @@ void unwrapToVariables() {
 
 Date humanDate(long unixTime) {
   Date dateHuman = new Date(unixTime*1000); //convert from milliseconds
-  return dateHuman;
+  textSetup();
+  fill(black);
+  println(dateHuman);
+return dateHuman;
+  
 }
 
 void currentLviv() {
@@ -82,11 +87,11 @@ void currentLviv() {
   nameLviv = jsonCurrentLviv.getString("name");
   println("City Name", nameLviv );
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void forecastLviv() {
    JSONArray forecastLviv = jsonForecastLviv.getJSONArray("weather"); //Unwrapping
    JSONObject overallLviv = forecastLviv.getJSONObject(0); //Unwrap {}
-  mainWeatherLviv = overallLviv.getString("main");
-  iconLviv = overallLviv.getString("icon");
+  iconForecastLviv = overallLviv.getString("icon");
 
 }
 //End forecastLviv

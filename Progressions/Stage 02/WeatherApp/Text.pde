@@ -12,7 +12,7 @@ void textSetup( ) {
 String date;
 void barText() {
   fill(black);
-  text(nameLviv, dateX, dateY, dateRectWidth, dateRectHeight );
+ //text(dateHuman, dateX, dateY, dateX, dateY);
   text( nameLviv,LvivX, LvivY, LvivRectWidth, LvivRectHeight);
   //
   text(tempLviv+"°C",temperatureX+temperatureWidth*1/2, temperatureY+temperatureHeight*1/2);
