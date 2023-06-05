@@ -32,5 +32,14 @@ void population() {
  iconY=temperatureY;
  iconWidth=temperatureWidth;
  iconHeight=temperatureHeight;
-  
+ FeelsLikeX=iconX;
+ FeelsLikeY=LvivY+temperatureHeight*2.3;
+  WindX=dateX+ temperatureWidth + temperatureWidth*1.5;
+  WindY=FeelsLikeY;
+  PressureX=temperatureX;
+  PressureY=FeelsLikeY;
+  GustX=PressureX + temperatureWidth +temperatureWidth;
+  GustY=FeelsLikeY;
+  HumidityX=GustX + temperatureWidth +temperatureWidth;
+  HumidityY =FeelsLikeY;
 }

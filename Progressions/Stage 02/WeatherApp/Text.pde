@@ -12,7 +12,7 @@ void textSetup( ) {
 String date;
 void barText() {
   fill(black);
- //text(dateHuman, dateX, dateY, dateX, dateY);
+ //text("" +dateHuman, dateX, dateY, dateX, dateY);
   text( nameLviv,LvivX, LvivY, LvivRectWidth, LvivRectHeight);
   //
   text(tempLviv+"°C",temperatureX+temperatureWidth*1/2, temperatureY+temperatureHeight*1/2);
@@ -27,6 +27,21 @@ void barText() {
   //fill(resetDefaultInk);
   //////////////////////Forecast Text
     textFont(lucida, 36);
-  text("Forecast", LvivX, LvivY+temperatureHeight*2.3, LvivRectWidth, LvivRectHeight);
+  text("Forecast", LvivX, LvivY+temperatureHeight*4.2, LvivRectWidth, LvivRectHeight);
+  ///FEELS LIKE
+     textFont(lucida, 25);
+     fill(#000000);
+  text("Feels like:",FeelsLikeX, FeelsLikeY, temperatureWidth, temperatureHeight*1/2);
+   text(""+feelsLikeLviv+"°C" ,FeelsLikeX, FeelsLikeY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
+   //WIND
+  text("Wind:", WindX, WindY, temperatureWidth, temperatureHeight*1/2);  
+  text(""+windSpeedLviv+"km/h",WindX, WindY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
+  //Pressure
+  text("Pressure:",PressureX, PressureY, temperatureWidth, temperatureHeight*1/2);
+  text(""+pressureLviv+" kPa",PressureX, PressureY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
+  text("Gust:", GustX, GustY, temperatureWidth, temperatureHeight*1/2);
+  text(""+gustLviv+"km/h", GustX, GustY+ temperatureHeight, temperatureWidth, temperatureHeight);
+  text("Humidity:",HumidityX, HumidityY, temperatureWidth, temperatureHeight*1/2);
+    text(""+humidityLviv+"%",HumidityX, HumidityY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
 }//End spaceBarText
 //

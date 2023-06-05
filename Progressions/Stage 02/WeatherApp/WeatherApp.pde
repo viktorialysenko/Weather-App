@@ -4,6 +4,7 @@ int appWidth, appHeight, smallerDimension, largerDimension;
 float dateX, dateY, dateRectWidth, dateRectHeight;
 float LvivX, LvivY, LvivRectWidth, LvivRectHeight, temperatureX, temperatureY, temperatureWidth, temperatureHeight;
 float highX, highY, highWidth, highHeight, lowX, lowY, lowWidth, lowHeight, iconX, iconY, iconWidth, iconHeight;
+float FeelsLikeX, FeelsLikeY, WindX, WindY,PressureX, PressureY,GustX, GustY,HumidityX, HumidityY ;
 //
 void setup() {
   background(#C9F1FF);
@@ -19,6 +20,7 @@ void setup() {
   buildingURL();
   APICall();
   unwrapToVariables();
+  fill(#FFFFFF);
   rect(dateX, dateY, dateRectWidth, dateRectHeight);
   rect (LvivX, LvivY, LvivRectWidth, LvivRectHeight);
   rect(temperatureX, temperatureY, temperatureWidth, temperatureHeight);
@@ -27,7 +29,13 @@ void setup() {
   //
   rect(iconX, iconY, iconWidth, iconHeight);
   //
-  rect (LvivX, LvivY+temperatureHeight*2.3, LvivRectWidth, LvivRectHeight);
+  rect (LvivX, LvivY+temperatureHeight*4.2, LvivRectWidth, LvivRectHeight);
+  //
+  rect(FeelsLikeX, FeelsLikeY, temperatureWidth, temperatureHeight);
+  rect(WindX, WindY, temperatureWidth, temperatureHeight);
+  rect(PressureX, PressureY, temperatureWidth, temperatureHeight);
+  rect(GustX, GustY, temperatureWidth, temperatureHeight);
+  rect(HumidityX, HumidityY, temperatureWidth, temperatureHeight);
   textSetup();
   barText();
 
