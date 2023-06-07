@@ -79,7 +79,12 @@ void currentLviv() {
   gustLviv=windLviv.getFloat("gust");
 
   long apiCallTimeLviv = jsonCurrentLviv.getInt("dt"); //int not enough memory, needs long (float & double)
-  apiCurrentDateCall = humanDate(apiCallTimeLviv);
+  //apiCurrentDateCall = humanDate(apiCallTimeLviv);
+  // println(apiCurrentDateCall);
+   SimpleDataFormat sdf = new SimpleDateFormat("yyyy - MM - dd HH:mm:ss");
+   String CurrentDateLviv = sdf.format(apiCallTimeLviv);
+   println(CurrentDateLviv);
+  //
 
   JSONObject sysLviv = jsonCurrentLviv.getJSONObject("sys"); //Unwrap {}
   countryLviv = sysLviv.getString("country");

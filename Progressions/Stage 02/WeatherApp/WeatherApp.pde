@@ -5,6 +5,9 @@ float dateX, dateY, dateRectWidth, dateRectHeight;
 float LvivX, LvivY, LvivRectWidth, LvivRectHeight, temperatureX, temperatureY, temperatureWidth, temperatureHeight;
 float highX, highY, highWidth, highHeight, lowX, lowY, lowWidth, lowHeight, iconX, iconY, iconWidth, iconHeight;
 float FeelsLikeX, FeelsLikeY, WindX, WindY,PressureX, PressureY,GustX, GustY,HumidityX, HumidityY ;
+  String  CurrentDateLviv;
+  import java.text.SimpleDateFormat;
+  import java.until.Date;
 //
 void setup() {
   background(#C9F1FF);

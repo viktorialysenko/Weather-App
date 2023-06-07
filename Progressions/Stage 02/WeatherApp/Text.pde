@@ -12,7 +12,7 @@ void textSetup( ) {
 String date;
 void barText() {
   fill(black);
- //text("" +dateHuman, dateX, dateY, dateX, dateY);
+// text(apiCurrentDateCall, dateX, dateY, dateX, dateY);
   text( nameLviv,LvivX, LvivY, LvivRectWidth, LvivRectHeight);
   //
   text(tempLviv+"°C",temperatureX+temperatureWidth*1/2, temperatureY+temperatureHeight*1/2);
@@ -40,7 +40,7 @@ void barText() {
   text("Pressure:",PressureX, PressureY, temperatureWidth, temperatureHeight*1/2);
   text(""+pressureLviv+" kPa",PressureX, PressureY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
   text("Gust:", GustX, GustY, temperatureWidth, temperatureHeight*1/2);
-  text(""+gustLviv+"km/h", GustX, GustY+ temperatureHeight, temperatureWidth, temperatureHeight);
+  text(""+gustLviv+"km/h", GustX, GustY+ temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
   text("Humidity:",HumidityX, HumidityY, temperatureWidth, temperatureHeight*1/2);
     text(""+humidityLviv+"%",HumidityX, HumidityY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
 }//End spaceBarText
