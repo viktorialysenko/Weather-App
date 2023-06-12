@@ -6,8 +6,8 @@ float LvivX, LvivY, LvivRectWidth, LvivRectHeight, temperatureX, temperatureY, t
 float highX, highY, highWidth, highHeight, lowX, lowY, lowWidth, lowHeight, iconX, iconY, iconWidth, iconHeight;
 float FeelsLikeX, FeelsLikeY, WindX, WindY,PressureX, PressureY,GustX, GustY,HumidityX, HumidityY ;
   String  CurrentDateLviv;
-  import java.text.SimpleDateFormat;
-  import java.until.Date;
+  float h3forecastX,h3forecastY, h3forecastWidth, h3forecastHeight, h6forecastX,h6forecastY, h6forecastWidth, h6forecastHeight,h9forecastX, h9forecastY, h9forecastWidth, h9forecastHeight;
+
 //
 void setup() {
   background(#C9F1FF);
@@ -39,6 +39,10 @@ void setup() {
   rect(PressureX, PressureY, temperatureWidth, temperatureHeight);
   rect(GustX, GustY, temperatureWidth, temperatureHeight);
   rect(HumidityX, HumidityY, temperatureWidth, temperatureHeight);
+  //
+  rect(h3forecastX,h3forecastY, h3forecastWidth, h3forecastHeight);
+   rect(h6forecastX,h6forecastY, h6forecastWidth, h6forecastHeight);
+    rect(h9forecastX,h9forecastY, h9forecastWidth, h9forecastHeight);
   textSetup();
   barText();
 

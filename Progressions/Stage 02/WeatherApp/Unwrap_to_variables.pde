@@ -36,21 +36,23 @@ import java.util.Date; //Date Conversation, UNIX Time Stamp from Jan 1, 1970
 //Global Variables
 String mainWeatherLviv, descriptionLviv, iconLviv, countryLviv, nameLviv, windLviv;
 float tempLviv, tempMinLviv, tempMaxLviv, feelsLikeLviv, humidityLviv, windSpeedLviv,pressureLviv, gustLviv;
-String iconForecastLviv;
+float tempForecastLviv;
+String icon3hForecast;
 int sunriseLviv, sunsetLviv;
 Date apiCurrentDateCall;
+int dtInt;
 
 
 void unwrapToVariables() {
-  println(jsonCurrentLviv);
   currentLviv();
+  forecastLviv() ;
+
 }
 
 Date humanDate(long unixTime) {
   Date dateHuman = new Date(unixTime*1000); //convert from milliseconds
   textSetup();
   fill(black);
-  println(dateHuman);
 return dateHuman;
   
 }
@@ -61,8 +63,6 @@ void currentLviv() {
   //  printArray(weatherLviv);
 
   JSONObject allLviv = weatherLviv.getJSONObject(0); //Unwrap {}
-  mainWeatherLviv = allLviv.getString("main");
-  descriptionLviv = allLviv.getString("description");
   iconLviv = allLviv.getString("icon");
 
   JSONObject mainLviv = jsonCurrentLviv.getJSONObject("main"); //Unwrap {}
@@ -72,18 +72,14 @@ void currentLviv() {
   tempMaxLviv = mainLviv.getFloat("temp_max");
   humidityLviv = mainLviv.getFloat("humidity");
   pressureLviv= mainLviv.getFloat("pressure");
-  println("temperature Lviv:", tempLviv  );
 
   JSONObject windLviv = jsonCurrentLviv.getJSONObject("wind");
   windSpeedLviv=windLviv.getFloat("speed");
   gustLviv=windLviv.getFloat("gust");
 
   long apiCallTimeLviv = jsonCurrentLviv.getInt("dt"); //int not enough memory, needs long (float & double)
-  //apiCurrentDateCall = humanDate(apiCallTimeLviv);
-  // println(apiCurrentDateCall);
-   SimpleDataFormat sdf = new SimpleDateFormat("yyyy - MM - dd HH:mm:ss");
-   String CurrentDateLviv = sdf.format(apiCallTimeLviv);
-   println(CurrentDateLviv);
+  apiCurrentDateCall = humanDate(apiCallTimeLviv);
+  println(apiCurrentDateCall);
   //
 
   JSONObject sysLviv = jsonCurrentLviv.getJSONObject("sys"); //Unwrap {}
@@ -92,13 +88,17 @@ void currentLviv() {
   sunsetLviv = sysLviv.getInt("sunset");
 
   nameLviv = jsonCurrentLviv.getString("name");
-  println("City Name", nameLviv );
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void forecastLviv() {
-   JSONArray forecastLviv = jsonForecastLviv.getJSONArray("weather"); //Unwrapping
-   JSONObject overallLviv = forecastLviv.getJSONObject(0); //Unwrap {}
-  iconForecastLviv = overallLviv.getString("icon");
+  JSONArray forecastLviv = jsonForecastLviv.getJSONArray("list"); //Unwrapping
+  JSONObject overallLviv = forecastLviv.getJSONObject(0); //Unwrap {}
+JSONObject main = overallLviv.getJSONObject("main"); //Unwrap {}
+ float tempForecastLviv = main.getFloat("temp");
+println("temp "+tempForecastLviv);
+
+ 
+ 
 
 }
 //End forecastLviv

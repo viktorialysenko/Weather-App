@@ -42,4 +42,19 @@ void population() {
   GustY=FeelsLikeY;
   HumidityX=GustX + temperatureWidth +temperatureWidth;
   HumidityY =FeelsLikeY;
+  //
+  h3forecastX=WindX;
+  h3forecastY=FeelsLikeY+temperatureHeight+temperatureHeight*2.3;
+  h3forecastWidth=temperatureWidth;
+  h3forecastHeight=temperatureHeight;
+ //
+   h6forecastX=PressureX;
+   h6forecastY=h3forecastY;
+   h6forecastWidth=h3forecastWidth;
+   h6forecastHeight=h3forecastHeight;
+//
+  h9forecastX=GustX;
+  h9forecastY= h3forecastY;
+  h9forecastWidth=h3forecastWidth;
+  h9forecastHeight=h3forecastHeight;
 }

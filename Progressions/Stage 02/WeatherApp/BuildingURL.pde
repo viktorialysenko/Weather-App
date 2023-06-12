@@ -35,7 +35,8 @@ void buildingURL() {
 void APICall() {
   jsonCurrentLviv = loadJSONObject(URLCurrentLviv);
   jsonForecastLviv = loadJSONObject(URLForecastLviv);
-  println(jsonCurrentLviv);
+  println(jsonCurrentLviv); 
+    println(jsonForecastLviv);
 } //End APICall
 
 //Loading JSONObjects with Website API Data
