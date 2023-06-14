@@ -49,6 +49,6 @@ void barText() {
     text(""+humidityLviv+"%",HumidityX, HumidityY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
     /////
     text("In 3 hours:", h3forecastX,h3forecastY, h3forecastWidth, h3forecastHeight*1/3);
-    text(""+ tempForecastLviv, h3forecastX,h3forecastY+ h3forecastHeight*1/3, h3forecastWidth, h3forecastHeight*2/3);
+    text(" "+ tempForecastLviv +" ", h3forecastX,h3forecastY+ h3forecastHeight*1/3, h3forecastWidth, h3forecastHeight*2/3);
 }//End spaceBarText
 //

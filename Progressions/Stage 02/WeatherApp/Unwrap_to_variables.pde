@@ -94,7 +94,7 @@ void forecastLviv() {
   JSONArray forecastLviv = jsonForecastLviv.getJSONArray("list"); //Unwrapping
   JSONObject overallLviv = forecastLviv.getJSONObject(0); //Unwrap {}
 JSONObject main = overallLviv.getJSONObject("main"); //Unwrap {}
- float tempForecastLviv = main.getFloat("temp");
+  tempForecastLviv = main.getFloat("temp");
 println("temp "+tempForecastLviv);
 
  
