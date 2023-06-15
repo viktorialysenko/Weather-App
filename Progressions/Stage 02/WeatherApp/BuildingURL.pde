@@ -15,7 +15,7 @@ void buildingURL() {
   String baseURL_Current = domain + baseULR_data + folderWeather;
   String baseURL_Forecast = domain + baseULR_data + folderForecast;
   //
-  String LvivId = "id=702550"; //City ID Numbers
+ // String LvivId = "id=702550"; //City ID Numbers
   //
   String apiKey = "APPID=90629fbe422e899d3d3a2948ec1aa94e"; //API Key is PRIVATE so not included here
   String mode = "mode=json";
@@ -36,7 +36,7 @@ void APICall() {
   jsonCurrentLviv = loadJSONObject(URLCurrentLviv);
   jsonForecastLviv = loadJSONObject(URLForecastLviv);
   println(jsonCurrentLviv); 
-    println(jsonForecastLviv);
+ //   println(jsonForecastLviv);
 } //End APICall
 
 //Loading JSONObjects with Website API Data

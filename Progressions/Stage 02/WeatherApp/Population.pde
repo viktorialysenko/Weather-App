@@ -13,6 +13,16 @@ void population() {
   LvivX=appWidth*1/2-LvivRectWidth*1/2;
   LvivY=0+dateRectHeight;
   //
+  MilanX=LvivX+LvivRectWidth+LvivRectWidth*1/10;
+  MilanY=LvivY;
+  MilanWidth=LvivRectWidth;
+  MilanHeight=LvivRectHeight;
+  //
+  TorontoX=MilanX;
+  TorontoY=MilanY+ MilanHeight+MilanHeight*1/6;
+  TorontoWidth=MilanWidth;
+  TorontoHeight=MilanHeight;
+  //
   temperatureWidth=LvivRectWidth*1/2;
   temperatureHeight=LvivRectHeight*2.5;
   temperatureX=appWidth*1/2-temperatureWidth*1/2;
