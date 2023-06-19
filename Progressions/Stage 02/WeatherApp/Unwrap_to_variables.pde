@@ -1,41 +1,7 @@
-//UnwrapToVariables
-/* Code to Copy, use println() to verify
- - When validating data in JSON Lint
- - Choose which variables you need, create as Global Variables
- - build a generic unwrapping
- - build specfic unwrappings to Global Variables
- 
- Note: use APICall() Variables here, for example jsonCurrentLviv
- Caution: variables should be a mix of global and local variables
- 
- JSONArray weather = jsonObject-Variable.getJSONArray("weather"); //Unwrapping
- 
- JSONObject all = weather.getJSONObject(0); //Unwrap {}
- String mainWeather = all.getString("main");
- String description = all.getString("description");
- String icon = all.getString("icon");
- 
- JSONObject main = jsonObject-Variable.getJSONObject("main"); //Unwrap {}
- float temp = main.getFloat("temp");
- float tempMin = main.getFloat("temp_min");
- float tempMax = main.getFloat("temp_max");
- 
- int apiCallTime = jsonObject-Variable.getInt("dt");
- 
- JSONObject sys = jsonObject-Variable.getJSONObject("sys"); //Unwrap {}
- String country = sys.getString("country");
- int sunrise = sys.getInt("sunrise");
- int sunset = sys.getInt("sunset");
- 
- String name = jsonObject-Variable.getString("name");
- 
- */
-
-import java.util.Date; //Date Conversation, UNIX Time Stamp from Jan 1, 1970
-
+import java.util.Date;
 //Global Variables
 String mainWeatherLviv, descriptionLviv, iconLviv, countryLviv, nameLviv, windLviv;
-float tempLviv, tempMinLviv, tempMaxLviv, feelsLikeLviv, humidityLviv, windSpeedLviv,pressureLviv, gustLviv;
+float tempLviv, tempMinLviv, tempMaxLviv, feelsLikeLviv, humidityLviv, windSpeedLviv,pressureLviv,clouds;
 float tempForecastLviv, tempIn6Hours,tempIn9Hours;
 String icon3hForecast;
 int sunriseLviv, sunsetLviv;
@@ -72,12 +38,15 @@ void currentLviv() {
   tempMaxLviv = mainLviv.getFloat("temp_max");
   humidityLviv = mainLviv.getFloat("humidity");
   pressureLviv= mainLviv.getFloat("pressure");
+  
+   JSONObject cloudsLviv = jsonCurrentLviv.getJSONObject("clouds");
+   clouds=cloudsLviv.getFloat("all");
 
   JSONObject windLviv = jsonCurrentLviv.getJSONObject("wind");
   windSpeedLviv=windLviv.getFloat("speed");
-  gustLviv=windLviv.getFloat("gust");
-
-  long apiCallTimeLviv = jsonCurrentLviv.getInt("dt"); //int not enough memory, needs long (float & double)
+  //gustLviv=windLviv.getFloat("gust");
+ 
+  long apiCallTimeLviv = jsonCurrentLviv.getInt("dt"); 
   apiCurrentDateCall = humanDate(apiCallTimeLviv);
   println(apiCurrentDateCall);
   //

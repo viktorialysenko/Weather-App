@@ -7,17 +7,17 @@ JSONObject jsonForecastLviv;
 
 void buildingURL() {
   //Lesson for reading URLs is in String Names
-  String domain = "http://api.openweathermap.org"; //http vs https, s for secure
-  String baseULR_data = "/data/2.5/"; //opens two folders
-  String folderWeather = "weather?"; //opens weather folder
-  String folderForecast = "forecast?"; //opens forecast folder
+  String domain = "http://api.openweathermap.org"; 
+  String baseULR_data = "/data/2.5/";
+  String folderWeather = "weather?";
+  String folderForecast = "forecast?"; 
   //
   String baseURL_Current = domain + baseULR_data + folderWeather;
   String baseURL_Forecast = domain + baseULR_data + folderForecast;
   //
- // String LvivId = "id=702550"; //City ID Numbers
+ //String LvivId = "id=702550"; //City ID Numbers
   //
-  String apiKey = "APPID=90629fbe422e899d3d3a2948ec1aa94e"; //API Key is PRIVATE so not included here
+  String apiKey = "APPID=90629fbe422e899d3d3a2948ec1aa94e"; 
   String mode = "mode=json";
   String unitMetric = "units=metric";
   String and = "&";
@@ -26,7 +26,6 @@ void buildingURL() {
   URLCurrentLviv = baseURL_Current+LvivId+and+apiKey+and+mode+and+unitMetric;
   URLForecastLviv = baseURL_Forecast+LvivId+and+apiKey+and+mode+and+unitMetric;
 
-  //Verification in Console, copy-paste variable output to Chrome and verify data can be seen correctly
 
   println(URLCurrentLviv);
   println(URLForecastLviv);

@@ -3,17 +3,14 @@ PFont lucida;
 
 void textSetup( ) {
   lucida = createFont("Constantia", 24);
-
-  textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
-  //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  //int size = 24; //Change the number until it fits
+  textAlign(CENTER, CENTER); 
   textFont(lucida, 36);
 }//End textSetup
 String date;
 void CityNamesText() {
   fill(black);
   textFont(lucida, 36);
-  text( nameLviv, LvivX, LvivY, LvivRectWidth, LvivRectHeight);
+  text( "Lviv", LvivX, LvivY, LvivRectWidth, LvivRectHeight);
    text("Milan", MilanX, MilanY, MilanWidth, MilanHeight);
   text("Toronto", TorontoX, TorontoY, TorontoWidth, TorontoHeight);
   
@@ -54,8 +51,8 @@ void barText() {
   //Pressure
   text("Pressure:", PressureX, PressureY, temperatureWidth, temperatureHeight*1/2);
   text(""+pressureLviv+" kPa", PressureX, PressureY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
-  text("Gust:", GustX, GustY, temperatureWidth, temperatureHeight*1/2);
-  text(""+gustLviv+"km/h", GustX, GustY+ temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
+  text("Clouds:", GustX, GustY, temperatureWidth, temperatureHeight*1/2);
+  text(""+clouds, GustX, GustY+ temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
   text("Humidity:", HumidityX, HumidityY, temperatureWidth, temperatureHeight*1/2);
   text(""+humidityLviv+"%", HumidityX, HumidityY+temperatureHeight*1/3, temperatureWidth, temperatureHeight*1/2);
   /////

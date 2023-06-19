@@ -1,8 +1,8 @@
 float rectScaleWidth, rectScaleHeight;
 float rectStartDrawX, rectStartDrawY;
 void population() {
-  rectScaleWidth=1.0/5.0;//used to change x-size
-  rectScaleHeight =1.0/19.0;//used to change y-size
+  rectScaleWidth=1.0/5.0;
+  rectScaleHeight =1.0/19.0;
  dateRectWidth = appWidth* rectScaleWidth;
  dateRectHeight = appHeight * rectScaleHeight;
   dateX = appWidth*0+dateRectWidth*1/20;
@@ -48,8 +48,10 @@ void population() {
   WindY=FeelsLikeY;
   PressureX=temperatureX;
   PressureY=FeelsLikeY;
+  //
   GustX=PressureX + temperatureWidth +temperatureWidth;
   GustY=FeelsLikeY;
+  //
   HumidityX=GustX + temperatureWidth +temperatureWidth;
   HumidityY =FeelsLikeY;
   //
