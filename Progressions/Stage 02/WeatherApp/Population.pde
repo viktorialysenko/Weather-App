@@ -69,4 +69,9 @@ void population() {
   h9forecastY= h3forecastY;
   h9forecastWidth=h3forecastWidth;
   h9forecastHeight=h3forecastHeight;
+  //
+   poweredByWidth=appWidth*1/3;
+ poweredByHeight=appHeight*1/10;
+ poweredByX=appWidth-poweredByWidth;
+ poweredByY=appHeight-poweredByHeight;
 }

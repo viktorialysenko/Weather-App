@@ -7,13 +7,16 @@ float highX, highY, highWidth, highHeight, lowX, lowY, lowWidth, lowHeight, icon
 float FeelsLikeX, FeelsLikeY, WindX, WindY,PressureX, PressureY,GustX, GustY,HumidityX, HumidityY ;
 float MilanX, MilanY, MilanWidth, MilanHeight,TorontoX, TorontoY, TorontoWidth,TorontoHeight;
   String  CurrentDateLviv;
+  PFont garamond;
   color white=#FFFFFF;
+  float poweredByX,poweredByY,poweredByWidth, poweredByHeight;
   float h3forecastX,h3forecastY, h3forecastWidth, h3forecastHeight, h6forecastX,h6forecastY, h6forecastWidth, h6forecastHeight,h9forecastX, h9forecastY, h9forecastWidth, h9forecastHeight;
  String LvivId = "id=702550"; //City ID Number
  boolean Lviv=true, Milan=false, Toronto=false;
 void setup() {
   background(#C9F1FF);
   size(1200, 900);
+   lucida = createFont("Garamond", 48, false);
   appWidth = width;
   appHeight = height;
   display();
@@ -23,6 +26,10 @@ void setup() {
   APICall();
   unwrapToVariables();
   rectangles();
+  textAlign(CENTER, CENTER); 
+  textFont(lucida, 20 );
+  fill(black);
+  text("©powered by viktorialysenko on GitHub",poweredByX,poweredByY,poweredByWidth, poweredByHeight);
 }
 //
 void draw() {
